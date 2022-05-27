@@ -14,13 +14,9 @@ body {
 }
 
 .body-wrapper {
-    /* display: flex;
-    flex-direction: column; */
-    /* align-items: center;
-    justify-content: center; */
-    /* min-height: 100vh; */
-    /* min-height: 100px;
-    max-height: 100px; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .header,
@@ -33,30 +29,23 @@ body {
 
 .header,
 .footer {
-    padding: 15px;
+    padding: 5px;
     background-color: var(--bg-secondary-color);
     justify-content: center;
     text-align: center;
 }
 
 :root {
-    --black: black;
-    --white: white;
     --bg-secondary-color: rgb(223, 223, 223);
 }
 
 /*HEADER*/
-.header {
-}
-
 .header h1 {
     font-size: 24px;
 }
 
 /*MAIN*/
 .main {
-    /*height: calc(100vh - 140px);*/
-    /*padding: 15px;*/
     margin: 20px 0px;
 }
 .main .main-game {
@@ -79,8 +68,6 @@ body {
 }
 
 /*FOOTER*/
-.footer {
-}
 
 /*ANIMATIONS*/
 .main .main-game .card:hover,
@@ -89,5 +76,33 @@ body {
     transition-duration: 0.5s;
 }
 
-
 /*MEDIA QUERIES*/
+
+@media (min-width: 900px) {
+/*SHARED*/
+    .header,
+    .footer {
+    padding: 25px;
+}
+
+/*MAIN*/
+.main .main-game {
+    padding: 0 20px;
+}
+
+.main .main-game .card img {
+    width: 100px;
+    height: 100px;
+}
+}
+
+@media (max-width: 350px) {
+    /*HEADER*/
+    .header h1 {
+        font-size: 20px;
+    }
+    /*MAIN*/
+    .main .main-game {
+        gap: 20px;
+    }
+}
